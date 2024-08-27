@@ -1,0 +1,399 @@
+/* Root variables and reset */
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-size-base: 16px;
+  --light-blue-light-blue-100: #f3f5fc;
+  --color-gray: rgba(255, 255, 255, 0.24);
+  --white: #fff;
+  --dark-blue-dark-blue-300: #0a3871;
+  --color-steelblue: #3d6ba3;
+  --gap-base: 16px;
+  --padding-21xl: 40px;
+  --padding-xl: 20px;
+  --padding-5xl: 24px;
+  --padding-base: 16px;
+  --br-781xl: 800px;
+  --br-5xl: 24px;
+}
+
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-inter);
+  line-height: 1.5;
+  color: var(--dark-blue-dark-blue-300);
+  background-color: var(--light-blue-light-blue-100);
+}
+
+/* Layout */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  padding: var(--padding-21xl) var(--padding-xl) 72px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  padding-bottom: 40px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: var(--dark-blue-300);
+  background-color: rgba(243, 245, 252, 0.8); /* Light background with some transparency */
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+
+.encriptador-1-desktop {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
+  transition: margin-left 0.3s ease-out;
+}
+
+.encriptador-1-desktop-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.frame-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
+  width: 100%;
+}
+
+/* Header */
+.logo-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.logo-icon {
+  position:fixed;
+  top: 50px;
+  left: 10px;
+  height: 48px;
+  width: 120px;
+  margin-bottom: 1rem;
+  z-index: 1000;
+}
+
+.encriptador-de-texto-wrapper {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.encriptador-de-texto1 {
+  font-family: var(--font-roboto);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Text Input Area */
+.text-input-area {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+#input-text {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: var(--font-inter);
+  color: var(--dark-blue-dark-blue-300);
+  background-color: transparent;
+  border: none;
+  resize: none;
+  text-align: center;
+}
+
+#input-text::placeholder {
+  color: var(--dark-blue-dark-blue-300);
+  opacity: 0.7;
+  text-align: center;
+}
+
+#input-text:focus {
+  outline: none;
+}
+
+#input-text:not(:placeholder-shown) {
+  text-align: left;
+}
+
+/* Frame group (at bottom) */
+.frame-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-base);
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.frame-container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.solo-letras-minsculas {
+  font-size: 0.875rem;
+  color: rgba(73, 80, 87, 0.8);
+}
+
+/* Buttons */
+.button-parent {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 680px;
+  margin-top: 1rem;
+}
+
+.button, .button2 {
+  flex: 1;
+  min-width: 213px;
+  padding: var(--padding-5xl);
+  border-radius: var(--br-5xl);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button {
+  background-color: var(--dark-blue-dark-blue-300);
+  color: var(--white);
+  border: none;
+}
+
+.button:hover {
+  background-color: var(--color-steelblue);
+}
+
+.button2 {
+  background-color: #d8dfe8;
+  color: var(--dark-blue-dark-blue-300);
+  border: 1px solid var(--dark-blue-dark-blue-300);
+}
+
+.button2:hover {
+  background-color: #bfc7cf;
+  border-color: var(--color-steelblue);
+}
+
+.message-layout-child {
+  width: 400px;
+  height: 944px;
+  position: relative;
+  box-shadow: var(--shadow);
+  border-radius: 30px;
+  background-color: var(--white);
+  display: none;
+  max-width: 100%;
+}
+.mueco-icon {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 32px; /* Add some space between the image and text */
+}
+.ingresa-el-texto,
+.mueco-icon,
+.ningn-mensaje-fue {
+  align-self: stretch;
+  position: relative;
+  z-index: 1;
+}
+.ningn-mensaje-fue {
+  margin: 0;
+  font-size: inherit;
+  line-height: 120%;
+  font-weight: 700;
+  font-family: inherit;
+}
+.ingresa-el-texto {
+  font-size: var(--font-size-base);
+  line-height: 150%;
+  color: var(--gray-gray-400);
+}
+.ningn-mensaje-fue-encontrado-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.encriptador-1-desktop1,
+.message-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.default-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.message-layout {
+  width: 400px;
+  height: calc(100vh - 2 * var(--padding-21xl));
+  box-shadow: 0 10px 20px rgb(167, 167, 167);
+  border-radius: 30px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 32px;
+  font-size: 24px;
+  color: var(--gray-gray-500);
+  position: fixed;
+  right: -400px;
+  top: var(--padding-21xl);
+  transition: right 0.3s ease-out;
+  overflow: hidden;
+}
+
+.show-message-layout .message-layout {
+  right: var(--padding-xl);
+}
+
+.show-message-layout .encriptador-1-desktop {
+  margin-left: -400px;
+}
+
+.copy-button {
+  margin-top: auto;
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  padding: var(--padding-5xl);
+  background-color: var(--dark-blue-dark-blue-300);
+  border-radius: var(--br-5xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 213px;
+  max-width: 100%;
+}
+
+.copy-button:hover {
+  background-color: var(--color-steelblue);
+}
+
+.message-content {
+flex-grow: 1;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+width: 100%;
+height: 100%;
+overflow-y: auto;
+word-wrap: break-word;
+white-space: pre-wrap;
+}
+
+.message-content p {
+margin: 0;
+padding: 0;
+width: 100%;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .logo-parent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .encriptador-de-texto1 {
+    font-size: 2rem;
+  }
+
+  #input-text {
+    font-size: 1.25rem;
+    height: 250px;
+  }
+
+  .button-parent {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button, .button2 {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .message-layout {
+    width: 100%;
+    height: auto;
+    margin-top: var(--gap-base);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .encriptador-1-desktop {
+    padding: var(--padding-xl);
+  }
+
+  .encriptador-de-texto1 {
+    font-size: 1.5rem;
+  }
+
+  #input-text {
+    font-size: 1rem;
+    height: 200px;
+  }
+
+  .footer {
+    font-size: 0.6rem;
+    left: 5px;
+    bottom: 5px;
+  }
+}

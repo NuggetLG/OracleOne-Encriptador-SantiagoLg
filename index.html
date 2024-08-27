@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Inter:wght@400&display=swap" />
+    <script src="script.js"></script>
+</head>
+<body>
+  <div class="main-container">
+    <div class="encriptador-1-desktop">
+      <header class="logo-parent">
+          <img class="logo-icon" loading="lazy" alt="Logo" src="./public/logo.svg" />
+          <div class="encriptador-de-texto-wrapper">
+              <h1 class="encriptador-de-texto1">Encriptador de texto</h1>
+          </div>
+      </header>
+      <div class="text-input-area">
+        <textarea id="input-text" placeholder="Ingrese el texto aquí"></textarea>
+      </div>
+      <div class="frame-group">
+        <div class="frame-container">
+          <img class="biexclamation-circle-fill-icon" loading="lazy" alt="Exclamation" src="./public/biexclamationcirclefill.svg" />
+          <p class="solo-letras-minsculas">Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="button-parent">
+          <button class="button" id="encriptar">Encriptar</button>
+          <button class="button2" id="desencriptar">Desencriptar</button>
+        </div>
+      </div>
+    </div>
+    <div class="message-layout">
+      <div class="message-layout-child"></div>
+      <img
+        class="mueco-icon"
+        loading="lazy"
+        alt=""
+        src="./public/mueco.svg"
+      />
+
+      <div class="ningn-mensaje-fue-encontrado-parent">
+        <h3 class="ningn-mensaje-fue">Ningún mensaje fue encontrado</h3>
+        <div class="ingresa-el-texto">
+          Ingresa el texto que desees encriptar o desencriptar.
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>Made by Santiago Londoño Gil - 2024</p>
+  </footer>
+</body>
+</html>
